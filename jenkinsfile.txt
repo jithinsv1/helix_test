@@ -16,7 +16,7 @@ pipeline {
         stage('run integration test') {
             steps {
 
-                sh "mvn test -Dtestng.suitexml=${params.TEST_SUITE} -Dtest.url.base=${params.TargetURL}"
+                sh "sudo mvn test -Dtestng.suitexml=${params.TEST_SUITE} -Dtest.url.base=${params.TargetURL}"
             }
         }
 
